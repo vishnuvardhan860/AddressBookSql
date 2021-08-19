@@ -133,5 +133,21 @@ mysql> select count(lastname) from addressbook group by city;
 +-----------------+
 3 rows in set (0.03 sec)
 
+#UC-8
+
+mysql>  alter table addressbook add profession varchar(100) after lastname;
+Query OK, 0 rows affected (3.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> select * from  addressbook;
++----+-----------+----------+------------+------------+---------+--------+-------------+
+| id | firstname | lastname | profession | address    | city    | zip    | phonenumber |
++----+-----------+----------+------------+------------+---------+--------+-------------+
+|  1 | VISHNU    | VARDHAN  | NULL       | ATTEKALLU  | KURNOOL | 518347 |      958146 |
+|  2 | KVV       | VARDHAN  | NULL       | BILLEKALLU | ASPARI  | 518654 |       83047 |
+|  3 | KVV       | VISHNU   | NULL       | PATTIKONDA | TUGGALI | 518698 |       83047 |
++----+-----------+----------+------------+------------+---------+--------+-------------+
+3 rows in set (0.00 sec)
+
+
 
 
