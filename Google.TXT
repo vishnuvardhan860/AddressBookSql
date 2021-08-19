@@ -70,6 +70,24 @@ mysql> select * from addressbook;
 3 rows in set (0.00 sec)
 
 
+#UC-4
+
+
+mysql> update addressbook set firstname = 'BILL GATES' where lastname ='ELON MUSK';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> select * from addressbook;
++----+-----------+----------+------------+---------+--------+-------------+
+| id | firstname | lastname | address    | city    | zip    | phonenumber |
++----+-----------+----------+------------+---------+--------+-------------+
+|  1 | VISHNU    | VARDHAN  | ATTEKALLU  | KURNOOL | 518347 |      958146 |
+|  2 | KVV       | VARDHAN  | BILLEKALLU | ASPARI  | 518654 |       83047 |
+|  3 | KVV       | VISHNU   | PATTIKONDA | TUGGALI | 518698 |       83047 |
++----+-----------+----------+------------+---------+--------+-------------+
+3 rows in set (0.00 sec)
+
+
 
 
 
