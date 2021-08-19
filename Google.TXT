@@ -47,3 +47,29 @@ mysql> describe addressbook
 | phonenumber | int          | NO   |     | NULL    |                |
 +-------------+--------------+------+-----+---------+----------------+
 7 rows in set (0.23 sec)
+
+
+#UC-3
+
+
+mysql> insert into addressbook(firstname, lastname, address, city, zip, phonenumber) VALUES
+    -> ('VISHNU', 'VARDHAN', 'ATTEKALLU', 'KURNOOL', '518347', '958146'),
+    -> ('KVV', 'VARDHAN', 'BILLEKALLU', 'ASPARI', '518654', '83047'),
+    -> ('KVV', 'VISHNU', 'PATTIKONDA', 'TUGGALI', '518698', '83047');
+Query OK, 3 rows affected (1.94 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook;
++----+-----------+----------+------------+---------+--------+-------------+
+| id | firstname | lastname | address    | city    | zip    | phonenumber |
++----+-----------+----------+------------+---------+--------+-------------+
+|  1 | VISHNU    | VARDHAN  | ATTEKALLU  | KURNOOL | 518347 |      958146 |
+|  2 | KVV       | VARDHAN  | BILLEKALLU | ASPARI  | 518654 |       83047 |
+|  3 | KVV       | VISHNU   | PATTIKONDA | TUGGALI | 518698 |       83047 |
++----+-----------+----------+------------+---------+--------+-------------+
+3 rows in set (0.00 sec)
+
+
+
+
+
