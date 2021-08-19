@@ -1,0 +1,19 @@
+mysql> create database AddressBook;
+Query OK, 1 row affected (2.63 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| addressbook        |
+| information_schema |
+| mysql              |
+| ok                 |
+| payroll_service    |
+| payroll_service1   |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+10 rows in set (1.97 sec)
