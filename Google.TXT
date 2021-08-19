@@ -17,3 +17,33 @@ mysql> show databases;
 | world              |
 +--------------------+
 10 rows in set (1.97 sec)
+
+#UC-2
+
+mysql> create table addressbook
+    -> (
+    -> id               INT unsigned NOT NULL AUTO_INCREMENT,
+    -> firstname                varchar(150) not null,
+    -> lastname                 varchar(150) not null,
+    -> address                  varchar(200) not null,
+    -> city                     varchar(200) not null,
+    -> zip                      int(50) not null,
+    ->  phonenumber              int(200) not null,
+    -> PRIMARY KEY              (id)
+    -> );
+Query OK, 0 rows affected, 2 warnings (5.58 sec)
+
+mysql> describe addressbook
+    -> ;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int unsigned | NO   | PRI | NULL    | auto_increment |
+| firstname   | varchar(150) | NO   |     | NULL    |                |
+| lastname    | varchar(150) | NO   |     | NULL    |                |
+| address     | varchar(200) | NO   |     | NULL    |                |
+| city        | varchar(200) | NO   |     | NULL    |                |
+| zip         | int          | NO   |     | NULL    |                |
+| phonenumber | int          | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.23 sec)
